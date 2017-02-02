@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Anna Wróbel">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="image/x-icon" rel="icon" href="../favicon.ico">
+    <title>AJAX Flickr Photo Search</title>
+    <link rel="stylesheet" type="text/css" href="css/jqcloud.css" />
+    <script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="js/jqcloud-1.0.4.js"></script>
+    <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+    <script src="js/cloud.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1 id="top"><a href="http://anna.pm/flickr">Flickr Photo Search</a></h1></header>
+        <form>
+            <label for="search">What are you looking for?</label>
+            <input type="search" name="search" id="search" placeholder="..." autocomplete="off"> </form>
+        <ul id="photos"></ul>
+        <div id="ideas"> </div>
+        <p id="up"><a href="#top"><i class="material-icons">arrow_upward</i></a></p>
+    </div>
+    <script src="https://npmcdn.com/packery@2.1/dist/packery.pkgd.min.js"></script>
+    <script type="text/javascript" src="js/flickr.js"></script>
+    <script>
+        <!-- Smooth scrolling -->
+        $(function() {
+            $('a[href*="#"]:not([href="#"])').click(function() {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html, body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
+
+    </script>
+</body>
+
+</html>
