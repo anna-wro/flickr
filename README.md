@@ -1,5 +1,5 @@
 # Flickr Photo Search 
-![Flickr Photo Search](https://github.com/anna-wro/flickr/blob/master/img/screenshot.png)
+![Flickr Photo Search](https://github.com/anna-wro/flickr/blob/master/screenshots/screenshot.png)
 
 Web app that allows you to search through Flickr's public photo feed.
 
